@@ -7,13 +7,11 @@ switch($course_id){
         $scale ='EBC';
         break;
     case'houblon':
-        $test = array();
+        $test = array('Pellets','Cône');
         $poids = 'g';
         $scale ='% acide alpha';
         break;
 }
-
-
 ?>
 @extends('layouts.form')
 
@@ -57,10 +55,10 @@ switch($course_id){
 'required'=>true,
 ])
 
-            @include('partials.form-group', [
+            @include('partials.form-list', [
 'title'=>__('Type'),
-'type'=>'texte',
 'name'=>'form',
+'option'=>$test,
 'required'=>true,
 ])
             @include('partials.form-group', [
