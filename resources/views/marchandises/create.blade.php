@@ -57,11 +57,10 @@ switch($course_id){
 'required'=>true,
 ])
 
-            @include('partials.form-list', [
+            @include('partials.form-group', [
 'title'=>__('Type'),
 'type'=>'texte',
 'name'=>'form',
-'option'=>$test,
 'required'=>true,
 ])
             @include('partials.form-group', [
